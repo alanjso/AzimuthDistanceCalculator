@@ -365,7 +365,7 @@
           <item>
            <widget class="QLabel" name="label_18">
             <property name="text">
-             <string>Número ART:</string>
+             <string>Número RRT:</string>
             </property>
            </widget>
           </item>
@@ -409,7 +409,7 @@
           <item>
            <widget class="QLabel" name="label_16">
             <property name="text">
-             <string>CREA:</string>
+             <string>CAU:</string>
             </property>
            </widget>
           </item>

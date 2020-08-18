@@ -80,17 +80,17 @@ class AzimuthDistanceCalculator(object):
         # Create action that will start plugin configuration
         self.action = QAction(
             QIcon(":/plugins/azimuthdistancecalculator/north.png"),
-            self.tr("Calculator"), self.iface.mainWindow())
+            self.tr("Calculator**"), self.iface.mainWindow())
         # connect the action to the run method
         self.action.triggered.connect(self.run)
 
         # Add toolbar button and menu item
         self.iface.addToolBarIcon(self.action)
-        self.iface.addPluginToMenu(self.tr("Azimuth and Distance Calculator"), self.action)
+        self.iface.addPluginToMenu(self.tr("Azimuth and Distance Calculator **"), self.action)
 
     def unload(self):
         # Remove the plugin menu item and icon
-        self.iface.removePluginMenu(self.tr("Azimuth and Distance Calculator"), self.action)
+        self.iface.removePluginMenu(self.tr("Azimuth and Distance Calculator **"), self.action)
         self.iface.removeToolBarIcon(self.action)
 
     # run method that performs all the real work

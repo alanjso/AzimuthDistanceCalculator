@@ -104,7 +104,7 @@ class MemorialGenerator(QDialog, FORM_CLASS):
             td.setAttribute("rowspan", rowspan)
         td.setAttribute("style", "border-color : #000000 #000000 #000000 #000000; border-style: solid;")
         p.setAttribute("style", " text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;")
-        span.setAttribute("style", " font-size: 10pt; font-family: 'Arial', 'Helvetica', sans-serif; font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;")
+        span.setAttribute("style", " font-size: 10pt; font-family: 'Arial Black', 'Helvetica', sans-serif; font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;")
         
         textElement = tempDoc.createTextNode(text)
         
@@ -128,21 +128,21 @@ class MemorialGenerator(QDialog, FORM_CLASS):
         table = nodes.item(0).toElement()
 
         tr = tempDoc.createElement("tr")
-        tr.appendChild(self.createCellElement(tempDoc, u"MEMORIAL DESCRITIVO SINTÉTICO", 7, 0))
+        tr.appendChild(self.createCellElement(tempDoc, u"MEMORIAL DESCRITIVO SINTÉTICO", 6, 0))
         table.appendChild(tr)
         
         tr = tempDoc.createElement("tr")
         tr.appendChild(self.createCellElement(tempDoc, u"VÉRTICE", 0, 2))
         tr.appendChild(self.createCellElement(tempDoc, "COORDENADAS", 2, 0))
         tr.appendChild(self.createCellElement(tempDoc, "LADO", 0, 2))
-        tr.appendChild(self.createCellElement(tempDoc, "AZIMUTES", 2, 0))
+        tr.appendChild(self.createCellElement(tempDoc, "AZIMUTES", 0, 2))
         tr.appendChild(self.createCellElement(tempDoc, u"DISTÂNCIA", 0, 0))
         table.appendChild(tr)
         
         tr = tempDoc.createElement("tr")
         tr.appendChild(self.createCellElement(tempDoc, "N", 0, 0))
         tr.appendChild(self.createCellElement(tempDoc, "E", 0, 0))
-        tr.appendChild(self.createCellElement(tempDoc, "PLANO", 0, 0))
+        # tr.appendChild(self.createCellElement(tempDoc, "PLANO", 0, 0))
         # tr.appendChild(self.createCellElement(tempDoc, "REAL", 0, 0))
         tr.appendChild(self.createCellElement(tempDoc, "(m)", 0, 0))
         table.appendChild(tr)
@@ -254,9 +254,9 @@ class MemorialGenerator(QDialog, FORM_CLASS):
         newData = newData.replace("[DESCRIPTION]", self.getDescription())
         newData = newData.replace("[DATA]", time.strftime("%d/%m/%Y"))
         newData = newData.replace("[AUTOR]", self.autorEdit.text())
-        newData = newData.replace("[CREA]", self.creaEdit.text())
+        newData = newData.replace("[CAU]", self.creaEdit.text())
         newData = newData.replace("[CREDENCIAMENTO]", self.credenciamentoEdit.text())
-        newData = newData.replace("[ART]", self.artEdit.text())
+        newData = newData.replace("[RRT]", self.artEdit.text())
         
         memorial = open(self.fullMemorial, "w", encoding='utf-8')
         memorial.write(newData)

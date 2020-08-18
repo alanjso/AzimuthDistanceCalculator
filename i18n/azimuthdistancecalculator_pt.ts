@@ -330,7 +330,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message utf8="true">
         <location filename="../azimuthsAndDistances/ui_memorialGenerator.ui" line="368"/>
-        <source>Número ART:</source>
+        <source>Número RRT:</source>
         <translation></translation>
     </message>
     <message utf8="true">
@@ -340,7 +340,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../azimuthsAndDistances/ui_memorialGenerator.ui" line="412"/>
-        <source>CREA:</source>
+        <source>CAU:</source>
         <translation></translation>
     </message>
     <message utf8="true">

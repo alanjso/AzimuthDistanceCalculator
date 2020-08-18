@@ -14,5 +14,5 @@ Código INCRA: [COD_INCRA]			Matrícula: [MATRICULA]
 
 ________________________________
 [AUTOR]
-CREA: [CREA]
-Código Credenciamento: [CREDENCIAMENTO] ART: [ART]
+CAU: [CAU]
+Código Credenciamento: [CREDENCIAMENTO] RRT: [RRT]
