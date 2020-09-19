@@ -267,7 +267,7 @@ class MemorialGenerator(QDialog, FORM_CLASS):
         description += "Inicia-se a descrição deste perímetro no vértice "+self.tableWidget.item(0,0).text()+", de coordenadas "
         description += "N "+self.tableWidget.item(0,1).text()+" m, "
         description += "E "+self.tableWidget.item(0,2).text()+" m e "
-        description += "Datum " +self.datumEdit.text()+ " com Meridiano Central " +self.meridianoEdit.text()+ ", localizado a "+self.enderecoEdit.text()+", "
+        description += "Datum " +self.datumEdit.text()+ " com Meridiano Central " +self.meridianoEdit.text()+ ", localizado a "+self.enderecoEdit.text()+"; "
         # Código INCRA " +self.codIncraEdit.text()+ "; "
 
         rowCount = self.tableWidget.rowCount()            
