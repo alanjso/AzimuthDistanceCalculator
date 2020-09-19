@@ -1,0 +1,10 @@
+1) Instalar o plugin AzimuthDistanceCalculator da base de plugins do qgis
+2) Baixar o código editador do link: https://github.com/alanjso/AzimuthDistanceCalculator/archive/master.zip
+3) Extrair o conteudo em uma pasta
+4) No QGIS ir no menu Configurações > Perfis de Usuários > Abrir pasta do perfil ativo
+5) Na pasta aberta entrar na pasta python > plugins > AzimuthDistanceCalculator
+6) Copiar o conteudo da raiz da pasta baixada para dentro da pasta aberto pelo QGIS e substituir todos os arquivos
+7) Reiniciar o QGIS ou usar o Plugin Reloader para recarregar o plugin AzimuthDistanceCalculator
+8) Verificar se os nomes no menu de plugins agr estão AzimuthDistanceCalculator ** e Calculator ** para certificar-se que a alteração foi feita
+9) Testar 
+10) Enjoy! :D
