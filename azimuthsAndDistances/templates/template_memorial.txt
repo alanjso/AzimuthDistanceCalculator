@@ -1,10 +1,10 @@
 ﻿MEMORIAL DESCRITIVO
 
-Imóvel: [IMOVEL]							Comarca: [COMARCA]
+Imóvel: [IMOVEL]
 Proprietário: [PROPRIETARIO]
 UF: [UF]								Município: [MUNICIPIO]
-Código INCRA: [COD_INCRA]			Matrícula: [MATRICULA]
-Área (m2): [AREA]							Perímetro: [PERIMETRO]
+Área (m2): [AREA]                       Matrícula: [MATRICULA]
+										Perímetro: [PERIMETRO]
 
 
 	[DESCRIPTION]
