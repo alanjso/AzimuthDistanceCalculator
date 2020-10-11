@@ -87,17 +87,18 @@ class AzimuthsAndDistancesDialog(QDialog, FORM_CLASS):
             return points[::-1]
 
     def setFirstPointToNorth(self, coords, yMax):
-        if coords[0].y() == yMax:
-            return coords
+        return coords
+        # if coords[0].y() == yMax:
+        #     return coords
 
-        coords.pop()
-        firstPart = []
-        for i in range(len(coords)):
-            firstPart.append(coords[i])
-            if coords[i].y() == yMax:
-                break
+        # coords.pop()
+        # firstPart = []
+        # for i in range(len(coords)):
+        #     firstPart.append(coords[i])
+        #     if coords[i].y() == yMax:
+        #         break
 
-        return coords[i:] + firstPart
+        # return coords[i:] + firstPart
 
     def saveFiles(self):
         if (not self.distancesAndAzimuths) or (not self.points):
