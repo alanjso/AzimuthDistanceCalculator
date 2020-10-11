@@ -102,9 +102,9 @@ class MemorialGenerator(QDialog, FORM_CLASS):
             td.setAttribute("colspan", colspan)
         if rowspan > 0:
             td.setAttribute("rowspan", rowspan)
-        td.setAttribute("style", "border-color : #000000 #000000 #000000 #000000; border-style: solid;")
-        p.setAttribute("style", " text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;")
-        span.setAttribute("style", " font-size: 10pt; font-family: 'Arial Black', 'Helvetica', sans-serif; font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;")
+        td.setAttribute("style", "border-color : #ddd #ddd #000000 #ddd;") # border-style: solid;
+        p.setAttribute("style", "text-align: center; text-indent: 0px; padding: 2px 5px 2px 5px; margin: 2px 2px 2px 2px;")
+        span.setAttribute("style", "font-size: 10pt; font-family: 'D-DIN', 'DIN', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;")
         
         textElement = tempDoc.createTextNode(text)
         
@@ -129,14 +129,17 @@ class MemorialGenerator(QDialog, FORM_CLASS):
 
         tr = tempDoc.createElement("tr")
         tr.appendChild(self.createCellElement(tempDoc, u"MEMORIAL DESCRITIVO SINTÉTICO", 6, 0))
+        tr.setAttribute("style", "border-bottom: 1px solid #000000;")
         table.appendChild(tr)
         
         tr = tempDoc.createElement("tr")
         tr.appendChild(self.createCellElement(tempDoc, u"VÉRTICE", 0, 2))
+        tr.setAttribute("style", "border-bottom: 1px solid #000000;")
         tr.appendChild(self.createCellElement(tempDoc, "COORDENADAS", 2, 0))
         tr.appendChild(self.createCellElement(tempDoc, "LADO", 0, 2))
         tr.appendChild(self.createCellElement(tempDoc, "AZIMUTES", 0, 2))
         tr.appendChild(self.createCellElement(tempDoc, u"DISTÂNCIA", 0, 0))
+        tr.setAttribute("style", "border-bottom: 1px solid #000000;")
         table.appendChild(tr)
         
         tr = tempDoc.createElement("tr")
@@ -145,6 +148,7 @@ class MemorialGenerator(QDialog, FORM_CLASS):
         # tr.appendChild(self.createCellElement(tempDoc, "PLANO", 0, 0))
         # tr.appendChild(self.createCellElement(tempDoc, "REAL", 0, 0))
         tr.appendChild(self.createCellElement(tempDoc, "(m)", 0, 0))
+        tr.setAttribute("style", "border-bottom: 1px solid #000000;")
         table.appendChild(tr)
          
         convergence = float(self.convergenciaEdit.text())
@@ -153,7 +157,6 @@ class MemorialGenerator(QDialog, FORM_CLASS):
         
         for i in range(0,rowCount):
             lineElement = tempDoc.createElement("tr")
-             
             lineElement.appendChild(self.createCellElement(tempDoc, self.tableWidget.item(i,0).text(), 0, 0))
              
             lineElement.appendChild(self.createCellElement(tempDoc, self.tableWidget.item(i,1).text(), 0, 0))
@@ -165,6 +168,7 @@ class MemorialGenerator(QDialog, FORM_CLASS):
             # lineElement.appendChild(self.createCellElement(tempDoc, self.tableWidget.item(i,5).text(), 0, 0))
             lineElement.appendChild(self.createCellElement(tempDoc, self.tableWidget.item(i,5).text(), 0, 0))
             
+            lineElement.setAttribute("style", "border-bottom: 1px solid #000000;")
             table.appendChild(lineElement)
             
         simple = open(self.simpleMemorial, "w", encoding='utf-8')
