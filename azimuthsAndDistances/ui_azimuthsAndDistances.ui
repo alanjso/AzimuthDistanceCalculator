@@ -106,12 +106,12 @@
      </column>
      <column>
       <property name="text">
-       <string>N</string>
+       <string>E</string>
       </property>
      </column>
      <column>
       <property name="text">
-       <string>E</string>
+       <string>N</string>
       </property>
      </column>
      <column>

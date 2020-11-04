@@ -159,8 +159,8 @@ class MemorialGenerator(QDialog, FORM_CLASS):
             lineElement = tempDoc.createElement("tr")
             lineElement.appendChild(self.createCellElement(tempDoc, self.tableWidget.item(i,0).text(), 0, 0))
              
-            lineElement.appendChild(self.createCellElement(tempDoc, self.tableWidget.item(i,1).text(), 0, 0))
             lineElement.appendChild(self.createCellElement(tempDoc, self.tableWidget.item(i,2).text(), 0, 0))
+            lineElement.appendChild(self.createCellElement(tempDoc, self.tableWidget.item(i,1).text(), 0, 0))
  
             lineElement.appendChild(self.createCellElement(tempDoc, self.tableWidget.item(i,3).text(), 0, 0))
  
@@ -198,7 +198,7 @@ class MemorialGenerator(QDialog, FORM_CLASS):
         newData += "\n"
         newData += "\n"
         
-        newData += "Estação    Vante    Coordenada E    Coordenada N    Az Plano    Az Real    Distância\n"
+        newData += "Estação    Vante    Coordenada N    Coordenada E    Az Plano    Az Real    Distância\n"
         
         rowCount = self.tableWidget.rowCount()
         
@@ -269,8 +269,8 @@ class MemorialGenerator(QDialog, FORM_CLASS):
     def getDescription(self):
         description = str()
         description += "Inicia-se a descrição deste perímetro no vértice "+self.tableWidget.item(0,0).text()+", de coordenadas "
-        description += "N "+self.tableWidget.item(0,1).text()+", "
-        description += "E "+self.tableWidget.item(0,2).text()+" e "
+        description += "N "+self.tableWidget.item(0,2).text()+", "
+        description += "E "+self.tableWidget.item(0,1).text()+" e "
         description += "Datum " +self.datumEdit.text()+ " com Meridiano Central " +self.meridianoEdit.text()+ ", localizado a "+self.enderecoEdit.text()+"; "
         # Código INCRA " +self.codIncraEdit.text()+ "; "
 
@@ -285,8 +285,8 @@ class MemorialGenerator(QDialog, FORM_CLASS):
             description += self.tableWidget.item(i,5).text()+"m; até o vértice "
             if (i == rowCount - 1):
                 description += sideSplit[1]+", de coordenadas "
-                description += "N "+self.tableWidget.item(0,1).text()+" e "
-                description += "E "+self.tableWidget.item(0,2).text()+", encerrando esta descrição."
+                description += "N "+self.tableWidget.item(0,2).text()+" e "
+                description += "E "+self.tableWidget.item(0,1).text()+", encerrando esta descrição."
                 description += " Todas as coordenadas aqui descritas estão georreferenciadas ao Sistema Geodésico Brasileiro, "
                 # description += "a partir da estação RBMC de "+self.rbmcOrigemEdit.text()+" de coordenadas "
                 # description += "E "+self.rbmcEsteEdit.text()+" m e N "+self.rbmcNorteEdit.text()+" m, "
@@ -296,7 +296,7 @@ class MemorialGenerator(QDialog, FORM_CLASS):
                 description += "Todos os azimutes e distâncias, área e perímetro foram calculados no plano de projeção UTM."
             else:
                 description += sideSplit[1]+", de coordenadas "
-                description += "N "+self.tableWidget.item(i+1,1).text()+" e "
-                description += "E "+self.tableWidget.item(i+1,2).text()+";"
+                description += "N "+self.tableWidget.item(i+1,2).text()+" e "
+                description += "E "+self.tableWidget.item(i+1,1).text()+";"
                 
         return description

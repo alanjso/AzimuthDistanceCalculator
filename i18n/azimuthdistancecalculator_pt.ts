@@ -215,13 +215,13 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../azimuthsAndDistances/ui_azimuthsAndDistances.ui" line="109"/>
-        <source>E</source>
-        <translation>E</translation>
+        <source>N</source>
+        <translation>N</translation>
     </message>
     <message>
         <location filename="../azimuthsAndDistances/ui_azimuthsAndDistances.ui" line="114"/>
-        <source>N</source>
-        <translation>N</translation>
+        <source>E</source>
+        <translation>E</translation>
     </message>
     <message utf8="true">
         <location filename="../azimuthsAndDistances/ui_memorialGenerator.ui" line="14"/>
